@@ -1,0 +1,16 @@
+body{
+    background: #eee
+}
+
+form{
+    background: white;
+    margin: 40px auto;
+    max-width: 300px;
+    padding: 10px;
+}
+
+input{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+}
