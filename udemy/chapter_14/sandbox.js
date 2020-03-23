@@ -1,0 +1,30 @@
+// const now = new Date()
+//console.log(typeof(now), now)
+//console.log(now.getFullYear())
+//console.log(now.getMonth())
+//console.log(now.getDate())
+//console.log(now.getDay())
+//console.log(now.getHours())
+//console.log(now.getMinutes())
+//console.log(now.getSeconds())
+//console.log(now.getTime())
+//console.log(now.toISOString())
+//console.log(now.toLocaleString())
+//console.log(now.toTimeString())
+//console.log(now.toDateString())
+
+const before = new Date('Feb 1 2020 7:30:49')
+console.log(before)
+const now = new Date()
+console.log(now)
+
+const diff = now.getTime() - before.getTime()
+console.log(diff)
+
+let mins = Math.round(diff/1000/60)
+let hours = Math.round(mins/60)
+let days = Math.round(hours/24)
+console.log(mins,hours,days)
+
+let timestamp = 4459870906
+console.log(new Date(timestamp))
