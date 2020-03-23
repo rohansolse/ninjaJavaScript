@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1ed8f4ba9f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles.css">
+    <title>Todo's</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center text-light my-4">
+            <h1 class="mb-4">ToDo's</h1>
+            <form class="search">
+                <input class="form-control m-auto" type="text" name="search" placeholder="Search Todo's">
+            </form>
+        </header>
+        <ul class="list-group mx-auto todos text-light">
+            <li class="list-group-item d-flex justify-content-between align-item-center">
+                <span>Karan kanda kaap</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-item-center">
+                <span>Roshan Jevan banav</span>
+                <i class="fa r fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-item-center">
+                <span>Karan hulahul kami kar</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+        </ul>
+        <form class="add text-center my-4">
+            <label class="text-light">Add New</label>
+            <input class="form-control m-auto" type="text" name="add"  id="">
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
