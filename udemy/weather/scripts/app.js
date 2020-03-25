@@ -27,17 +27,24 @@ async function updateUI(data) {
     //update images and icon
     let weatherImg = null
     weather.IsDayTime ? weatherImg = 'img/day.svg' : weatherImg = 'img/night.svg'
-    time.setAttribute('src',weatherImg)
+    time.setAttribute('src', weatherImg)
     let weatherIcon = `img/icons/${weather.WeatherIcon}.svg`
-    icon.setAttribute('src',weatherIcon)
-    
+    icon.setAttribute('src', weatherIcon)
+
 }
 
 cityForm.addEventListener('submit', (e) => {
     e.preventDefault()
     let city = cityForm.city.value.trim()
+    localStorage.setItem('city', city)
     cityForm.reset()
     updateCity(city)
         .then(data => updateUI(data))
         .catch(error => console.log(error))
 })
+
+if (localStorage.city) {
+    updateCity(localStorage.getItem('city'))
+        .then(data => updateUI(data))
+        .catch(error => console.log(error))
+}
