@@ -1,17 +1,27 @@
-let normalArray = [23,45,23,56,45,87]
-normalArray.sort((a,b)=>b-a)
-// console.log(normalArray)
+const correctAns = ['B','B','B','B']
+let formData = document.querySelector('.quiz-form')
+let result = document.querySelector('.result')
 
-let dataArray = [
-    {name:"rohan",price:20},
-    {name:"roshan",price:30},
-    {name:"rohit",price:10},
-    {name:"sagar",price:40},
-    {name:"karan",price:50}
-]
-
-let filteredArray = dataArray
-    .filter((element)=> element.price > 20)
-    .map(product => `${product.name} has ${product.price/2} price`)
-
-console.log(filteredArray)
+formData.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    let score = 0
+    let output = 0
+    let answers = [formData.q1.value,formData.q2.value,formData.q3.value,formData.q4.value]
+    answers.forEach((element,index)=>{
+        if(element === correctAns[index]){
+            score += 1
+        }
+    })
+    totalScore = score / correctAns.length * 100
+    console.log(totalScore)
+    scrollTo(0,0)
+    result.classList.remove('d-none')
+    let timer = setInterval(()=>{
+        result.querySelector('span').textContent = `${output}%`
+        if(totalScore === output){
+            clearInterval(timer)
+        }else{
+            output ++
+        }
+    },10)
+})
