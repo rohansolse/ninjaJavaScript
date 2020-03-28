@@ -13,6 +13,10 @@
     outline: none !important;
 }
 
+.chat-window{
+    max-height: 400px;
+}
+
 .username{
     font-weight: bold;
 }
@@ -20,4 +24,10 @@
 .time{
     font-size: 0.7em;
     color: #999;
+}
+
+.update-msg{
+    margin: 10px auto;
+    color: teal;
+    text-align: center;
 }
